@@ -19,7 +19,7 @@ def joke():
 
 @app.get("/{friend}")
 def friend_joke(friend: str):
-    return friend + " tells his joke: " + pyjokes.get_joke()
+    return str(friend) + " tells his joke: " + pyjokes.get_joke()
 
 @app.get("/multi/{friend}")
 def multi_friend_joke(friend: str, jokes_number: int):
@@ -31,4 +31,4 @@ def multi_friend_joke(friend: str, jokes_number: int):
 @app.post("/", response_model=Joke)
 def create_joke(joke_input: JokeInput):
     """Создание шутки"""
-    return Joke(friend=joke_input.friend, joke=pyjokes.get_joke)
+    return Joke(friend=str(joke_input.friend), joke=pyjokes.get_joke())
