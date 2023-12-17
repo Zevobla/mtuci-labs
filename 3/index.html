@@ -1,58 +1,39 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width">
-    <title>Сайт портфолио</title>
-  </head>
-  <body>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Моя визитка</title>
+    <link rel="stylesheet" type="text/css" href="styles.css"> <!-- Подключение стилей из файла styles.css -->
+</head>
+
+<body>
+    <header>
+        <h1>Zevobla</h1>
+        <p>Разносторонне разваитая личность</p>
+    </header>
+
     <div class="container">
-      <div class="header">
-        <h1 class="header__logo">визитка</h1>
-        <div class="header__menu menu">
-          <button class="menu__btn">
-            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                 class="bi bi-list" viewBox="0 0 16 16">
-              <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 
-                    1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 
-                    .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"/>
-            </svg>
-          </button>
-          <ul class="menu__list hide">
-            <li class="menu__item">
-              <a href="#info" class="menu__link">
-                Обо мне
-              </a>
-            </li>
-            <li class="menu__item">
-              <a href="#portfolio" class="menu__link">
-                Портфолио
-              </a>
-            </li>
-          </ul>
-        </div>
-      </div>
-      <div class="info" id="info">
-        <h2 class="info__title">Обо мне</h2>
-          <p class="info__fullname">
-            Матяж Артемий Владимирович
-          </p>
-          <a href="https://t.me/zevobla" class="info__nickname">
-            @zevobla
-          </a>
-        </div>
-        <div class="portfolio" id="portfolio">
-          <button class="portfolio__btn">
-            <span>Открыть портфолио</span>
-            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                 class="bi bi-chevron-down" viewBox="0 0 16 16">
-              <path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-
-                    5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/>
-            </svg>
-          </button>
-          <!-- Ваш код, где блок со скриншотом сваггера с лабораторной работы №2... -->
-        </div>
-      </div>
-      <script src="main.js"></script>
-    </body>
+        <h2>Обо мне</h2>
+        <p>Разносторонне разваитая личность</p>
+
+        <h2>Проекты</h2>
+        <button class="toggle-button" id="projects-button">Показать проекты</button>
+        <ul class="projects-list" id="projects-list">
+            <li><strong>Проект 1:</strong> Краткое описание проекта 1.</li>
+            <li><strong>Проект 2:</strong> Краткое описание проекта 2.</li>
+            <li><strong>Проект 3:</strong> Краткое описание проекта 3.</li>
+        </ul>
+
+        <h2>Контакты</h2>
+        <button class="toggle-button" id="contacts-button">Показать контакты</button>
+        <ul class="contact-list" id="contacts-list">
+            <li>Email: ghost-brake-your-home@prtonmail.com</li>
+            <li>GitHub: https://github.com/zevobla</li>
+        </ul>
+    </div>
+
+    <script src="script.js"></script> <!-- Подключение файла сценария script.js -->
+</body>
+
 </html>
